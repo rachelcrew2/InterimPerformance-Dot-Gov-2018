@@ -3743,6 +3743,13 @@ input.usa-input-medium {
 
 }
 
+.usa-section-gray-ltgrayborder {
+  background-color: #d6d7d9;
+  color: #ffffff;
+  border-top: 1.6rem solid #5b616b;
+
+}
+
 .usa-hero-callout {
   background-color: #112e51;
   padding: 3rem;

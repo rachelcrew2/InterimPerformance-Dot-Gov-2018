@@ -3739,14 +3739,14 @@ input.usa-input-medium {
 .usa-section-ltblue-border {
   background-color: #205493;
   color: #ffffff;
-  border-top: 1.6rem solid #205493;
+  border-top: 1.6rem solid #0071bc;
 
 }
 
-.usa-section-gray-ltgrayborder {
+.usa-section-gray-topborder {
   background-color: #d6d7d9;
   color: #ffffff;
-  border-top: 1.6rem solid #5b616b;
+  border-top: 1.6rem solid #205493;
 
 }
 

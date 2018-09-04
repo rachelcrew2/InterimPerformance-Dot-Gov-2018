@@ -34,3 +34,10 @@ $usa-nav-width: 22%;
     vertical-align: bottom;
   }
 }
+
+
+@media screen and (min-width:700px) {
+   .awards-graphic.png img {
+    display: none;
+  }
+}

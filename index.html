@@ -24,9 +24,47 @@ layout: navigation_index
         <!-- <p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p> -->
       </div>
     </section>
+  <section class="usa-section usa-section-dark usa-graphic_list">
+      <div class="usa-grid usa-graphic_list-row">
+          <div class="usa-width-one-whole usa-media_block">
+            <h2>Recent News</h2>
+            <p>Latest updates on how agencies are serving the American people</p>
+          </div>
+      </div>
+    </section>
+
+    <section class="usa-section usa-section-light usa-graphic_list">
+      <div class="usa-grid usa-graphic_list-row">
+        <div class="usa-flex usa-flex-wrap">
+          <div class="usa-width-one-third usa-media_block">
+          <!--  <div id="border">-->
+            <a class="twitter-timeline" data-width="100%" data-height="53rem" data-theme="light" data-link-color="#0071bc" data-border-color="#0071bc" href="https://twitter.com/PerformanceGov" >Tweets by @OMBPress</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+        <!--  </div>-->
+          </div>
+          {% for project in site.posts limit:2 %}
+            <div class="usa-width-one-third usa-width-tablet">
+              {% include card-homepage.html
+               image_src=project.image
+               image_alt=project.image_accessibility
+               image_icon=project.image_icon
+               agency=project.agency
+               tagline=project.title
+               date=project.date
+               description=project.excerpt
+               link=project.permalink
+              %}
+            </div>
+          {% endfor %}
+        </div>
+        <center>
+        <a class="usa-button usa-button-big" href="news/index.html">Read More News
+        </a>
+      </center>
+    </section>
+
     <section class="usa-section usa-section-dark usa-graphic_list">
       <div class="usa-grid usa-graphic_list-row">
-        <div class="usa-width-one-half usa-media_block">
+              <div class="usa-width-one-half usa-media_block">
           <a href="PMA/"><img class="usa-media_block-img" src="img/homepage_images/436043_original.png" alt="Alt text"></a>
           <div class="usa-media_block-body">
               <a href="PMA/" style="text-decoration: none"><h3>The President's Management Agenda</h3></a>
@@ -41,8 +79,40 @@ layout: navigation_index
           </div>
         </div>
       </div>
+</section>
+      <!--2nd row-->
+      <section class="usa-section usa-graphic_list">
+        <div class="usa-grid usa-graphic_list-row">
+          <center>
+            <p>The Federal government sets both Priority Goals – cross-agency and within agencies – that are near-term, implementation focused priorities of leadership as well as strategic objectives that are comprehensive of agencies’ missions.<p>
+        <div class="usa-width-one-third usa-media_block">
+          <div class="usa-media_block-body">
+
+          <a href="PMA/"><img  src="img/homepage_images/436043_original.png" style="width:80px;" alt="Alt text"></a>
+              <a href="PMA/" style="text-decoration: none"><h3>Cross Agency Priority Goals</h3></a>
+            <p>Cross-Agency Priority (CAP) Goals are a tool used by leadership to accelerate progress on a limited number of Presidential priority areas where implementation requires active collaboration among multiple agencies.</p>
+          </div>
+        </div>
+        <div class="usa-width-one-third usa-media_block">
+          <div class="usa-media_block-body">
+          <a href="about/framework_about.html"><img src="img/homepage_images/target_icon.png" alt="Alt text" style="width:80px;"></a>
+          <a href="about/framework_about.html" style="text-decoration: none"> <h3>Agency Priority Goals</h3></a>
+            <p>Agency Priority Goals (APGs) focus leadership priorities, set outcomes, and measure results, bringing focus to mission areas where agencies need to drive significant progress and change. Click here to learn more about Agency Priority Goals or view individual APGs by selecting from the dropdown below.</p>
+          </div>
+        </div>
+
+        <div class="usa-width-one-third usa-media_block">
+      <a href="PMA/">
+            <div class="usa-media_block-body">
+              <img src="img/homepage_images/436043_original.png" alt="Alt text" style="width:80px;"></a>
+              <a href="PMA/" style="text-decoration: none"><h3>Strategic Objectives</h3></a>
+            <p>Updated and revised every four years, Strategic Objectives reflect the outcome or management impacts the agency is trying to achieve over the term of an Administration. <a href="about/objectives_about.html">Click here</a> to learn more about strategic objectives, or view Agency Strategic Plans and objectives by selecting from the dropdown below.</p>
+          </div>
+        </div>
+      </div></center>
+      <!--end third row-->
     </section>
-    <section class="usa-section">
+  <!--  <section class="usa-section">
           <div class="usa-grid">
             <p>The Federal government sets both Priority Goals – cross-agency and within agencies – that are near-term, implementation focused priorities of leadership as well as strategic objectives that are comprehensive of agencies’ missions. View these current goals and description of each below.<p>
        <h2> Cross Agency Priority Goals</h2>
@@ -86,7 +156,7 @@ layout: navigation_index
    <!--</ul>
            </div>
            <div class="usa-width-one-fourth">
-             <ul style="list-style: none;"> -->
+             <ul style="list-style: none;">
                <li>
                  <a href="health_and_human_services/APG_hhs_1.html">Department of Health and Human Services</a>
                </li>
@@ -130,7 +200,7 @@ layout: navigation_index
       <!--        </ul>
         </div>
            <div class="usa-width-one-fourth">
-             <ul style="list-style: none;">-->
+             <ul style="list-style: none;">
              <li>
                <a href="EPA/APG_epa_1.html">Environmental Protection Agency</a>
              </li>
@@ -195,10 +265,10 @@ layout: navigation_index
        <a href="energy/energy.html">Department of Energy</a>
      </li>
 
-   <!--</ul>
+</ul>
            </div>
            <div class="usa-width-one-fourth">
-             <ul style="list-style: none;"> -->
+             <ul style="list-style: none;">
                <li>
                  <a href="health_and_human_services/health_and_human_services.html">Department of Health and Human Services</a>
                </li>
@@ -238,10 +308,10 @@ layout: navigation_index
                  <a href="veterans_affairs/veterans_affairs.html">Department of Veterans Affairs</a>
                </li>
 
-      <!--        </ul>
+            </ul>
         </div>
            <div class="usa-width-one-fourth">
-             <ul style="list-style: none;">-->
+             <ul style="list-style: none;">
              <li>
                <a href="EPA/EPA.html">Environmental Protection Agency</a>
              </li>
@@ -271,42 +341,4 @@ layout: navigation_index
             </div>
           </li>
       </div>
-    </section>
-    <section class="usa-section usa-section-dark usa-graphic_list">
-      <div class="usa-grid usa-graphic_list-row">
-          <div class="usa-width-one-whole usa-media_block">
-            <h2>Recent News</h2>
-            <p>Latest updates on how agencies are serving the American people</p>
-          </div>
-      </div>
-    </section>
-
-    <section class="usa-section usa-graphic_list">
-      <div class="usa-grid usa-graphic_list-row">
-        <div class="usa-flex usa-flex-wrap">
-          <div class="usa-width-one-third usa-media_block">
-          <!--  <div id="border">-->
-            <a class="twitter-timeline" data-width="100%" data-height="60rem" data-theme="light" data-link-color="#0071bc" data-border-color="#0071bc" href="https://twitter.com/PerformanceGov" >Tweets by @OMBPress</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
-        <!--  </div>-->
-          </div>
-          {% for project in site.posts limit:2 %}
-            <div class="usa-width-one-third usa-width-tablet">
-              {% include card.html
-               image_src=project.image
-               image_alt=project.image_accessibility
-               image_icon=project.image_icon
-               agency=project.agency
-               tagline=project.title
-               date=project.date
-               description=project.excerpt
-               link=project.permalink
-               tags=project.tags
-              %}
-            </div>
-          {% endfor %}
-        </div>
-        <center>
-        <a class="usa-button usa-button-big" href="news/index.html">Read More News
-        </a>
-      </center>
     </section>
